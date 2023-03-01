@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    tools:context=".user.CreateGroupActivity"
+    tools:ignore="Overdraw">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_cancel"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#313131"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/bold"
+                android:text="Groups"
+                android:textColor="#313131"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toStartOf="@+id/settings"
+                app:layout_constraintStart_toEndOf="@+id/back"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <TextView
+                android:id="@+id/stories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/bold"
+                android:text="Create group"
+                android:textColor="#313131"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:ignore="HardcodedText,SpUsage" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:id="@+id/create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/search_et"
+            android:backgroundTint="#fff"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/stories"
+            android:layout_height="wrap_content"
+            tools:targetApi="lollipop">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B9C0C7"
+                android:fontFamily="@font/bold"
+                android:layout_marginTop="14dp"
+                android:inputType="textVisiblePassword"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:maxLines="1"
+                android:id="@+id/name"
+                android:textColor="#313131"
+                android:hint="Group name"
+                app:hintTextColor="#B9C0C7"
+                android:textSize="20dp"
+                tools:targetApi="lollipop"
+                android:autofillHints=""
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <Button
+                android:id="@+id/video_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/search_et"
+                android:stateListAnimator="@null"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="@font/bold"
+                android:text="Create group"
+                android:textAllCaps="false"
+                android:layout_below="@+id/name"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                tools:targetApi="lollipop"
+                tools:ignore="HardcodedText,SpUsage" />
+        </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/mygroups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/bold"
+                android:text="My groups"
+                android:textColor="#313131"
+                android:textSize="17dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/create"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <RelativeLayout
+                android:id="@+id/mfriends"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_white"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mygroups">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/friendslist"
+                    android:layout_margin="8dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/empty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                android:background="@drawable/button_white"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mygroups">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="12dp"
+                    android:fontFamily="@font/bold"
+                    android:text="No Groups"
+                    android:layout_centerInParent="true"
+                    android:textColor="#313131"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,SpUsage" />
+            </RelativeLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</ScrollView>

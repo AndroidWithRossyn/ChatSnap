@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    tools:context=".user.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_cancel"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#313131"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/img_password"
+            android:background="#0000"
+            android:fontFamily="@font/med"
+            android:hint="Search.."
+            android:inputType="text"
+            android:textColorHint="#313131"
+            android:maxLines="1"
+            android:textColor="#313131"
+            android:textSize="25dp"
+            android:autofillHints=""
+            tools:ignore="HardcodedText,SpUsage,TextFields" />
+
+        <ImageView
+            android:id="@+id/img_password"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/ic_search"
+            app:tint="#313131"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/stories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bold"
+        android:text="My Friends"
+        android:textColor="#313131"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4"
+        tools:ignore="HardcodedText,SpUsage" />
+
+        <RelativeLayout
+            android:id="@+id/fly"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stories">
+
+    <RelativeLayout
+        android:id="@+id/mfriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_white"
+        android:layout_marginEnd="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/friendslist"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:visibility="gone"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_white"
+            android:layout_marginEnd="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/bold"
+                android:text="No Friends"
+                android:layout_centerInParent="true"
+                android:textColor="#313131"
+                android:textSize="18dp"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,SpUsage" />
+        </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/bold"
+            android:text="Friend requests"
+            android:textColor="#313131"
+            android:textSize="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fly"
+            tools:ignore="HardcodedText,SpUsage" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rqly"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/req">
+        <RelativeLayout
+            android:id="@+id/reqfriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_white"
+            android:layout_marginEnd="16dp"
+        >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/reqlist"
+                android:layout_margin="8dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/emotyfriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:background="@drawable/button_white"
+            android:layout_marginEnd="16dp"
+>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/bold"
+                android:text="No Requests"
+                android:layout_centerInParent="true"
+                android:textColor="#313131"
+                android:textSize="18dp"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText,SpUsage" />
+        </RelativeLayout>
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/addf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/bold"
+        android:text="Users"
+        android:textColor="#313131"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rqly"
+        tools:ignore="HardcodedText,SpUsage" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_white"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addf">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</ScrollView>

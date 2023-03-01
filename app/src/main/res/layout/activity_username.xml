@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".auth.Username">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:text="Pick a username"
+        android:textColor="#313131"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/bold"
+        android:text="Your username is how friends add
+you on chatsnap"
+        android:textAlignment="center"
+        android:textColor="#BAC0C4"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:hintTextColor="#B9C0C7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         android:backgroundTint="#B9C0C7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop"
+        tools:ignore="HardcodedText">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#B9C0C7"
+            android:fontFamily="@font/bold"
+            android:digits="abcdefghijklmnopqrstuvwxyz1234567890._"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="#313131"
+            android:textSize="21dp"
+            tools:ignore="LabelFor,SpUsage"
+            tools:targetApi="lollipop"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/login_btn"
+        android:backgroundTint="#96589D"
+        android:fontFamily="@font/bold"
+        android:stateListAnimator="@null"
+        android:text="Sign up"
+        android:id="@+id/signup"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        tools:targetApi="lollipop"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:id="@+id/pg"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:theme="@style/progressColor"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="@+id/signup"
+        app:layout_constraintTop_toTopOf="@+id/signup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

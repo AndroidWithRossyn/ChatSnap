@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="editor_size">35dp</dimen>
+    <dimen name="normal_margin" tools:ignore="UnusedResources">8dp</dimen>
+    <dimen name="top_tool_icon_width">50dp</dimen>
+</resources>

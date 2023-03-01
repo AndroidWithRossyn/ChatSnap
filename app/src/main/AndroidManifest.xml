@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.spacester.chatsnapsupdate">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        tools:ignore="ManifestOrder" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.sensor.gyroscope" />
+
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name="com.spacester.chatsnapsupdate.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name="com.spacester.chatsnapsupdate.user.ReceiverActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.CallingActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.videoCall.VideoCallActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.faceFilters.FaceFilters" />
+        <activity android:name="com.spacester.chatsnapsupdate.CamActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.ChangeEmail" />
+        <activity android:name="com.spacester.chatsnapsupdate.ChangePassword" />
+        <activity android:name="com.spacester.chatsnapsupdate.PrivacyPolicy" />
+        <activity android:name="com.spacester.chatsnapsupdate.Settings">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.spacester.chatsnapsupdate.Check" />
+        <activity android:name="com.spacester.chatsnapsupdate.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.spacester.chatsnapsupdate.auth.ForgotPassword"
+            android:theme="@style/Auth" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.SendActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.ImageViewActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.AddStoryActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.DiscoveryViewerActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.StoryViewerActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.ViewStoryActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.UserFriendListActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.ViewDiscoveryActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.MediaView" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.EditGroupActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.EditProfileActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.Notification" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.CreateGroupActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.AddMembersActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.GroupMembersActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.GroupProfile" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.GroupChatActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.ChatUserListActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.ChatActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.FriendListActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.RequestActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.UserProfileActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.SearchActivity" />
+        <activity android:name="com.spacester.chatsnapsupdate.user.ProfileActivity" />
+        <activity
+            android:name="com.spacester.chatsnapsupdate.auth.Username"
+            android:theme="@style/Auth" />
+        <activity
+            android:name="com.spacester.chatsnapsupdate.auth.Signup"
+            android:theme="@style/Auth" />
+        <activity
+            android:name="com.spacester.chatsnapsupdate.auth.Login"
+            android:theme="@style/Auth" />
+        <activity android:name="com.spacester.chatsnapsupdate.auth.Welcome" />
+        <activity
+            android:name="com.spacester.chatsnapsupdate.MainActivity"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name="com.spacester.chatsnapsupdate.photoeditor.EditImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter
+                android:label="@string/app_intent_name"
+                android:scheme="file"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.spacester.chatsnapsupdate.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.spacester.chatsnapsupdate.notification.FirebaseMessaging"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8957916229862289~4242238048" />
+    </application>
+
+</manifest>

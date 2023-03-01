@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "224340447474",
+    "firebase_url": "https://chatsnap-5a4cb.firebaseio.com",
+    "project_id": "chatsnap-5a4cb",
+    "storage_bucket": "chatsnap-5a4cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224340447474:android:3dd63b0240162e9971806b",
+        "android_client_info": {
+          "package_name": "com.spacester.chatsnaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224340447474-fbu21nqvdj032enfp3m0127acr1sacqr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spacester.chatsnaps",
+            "certificate_hash": "6235ee2ebd50e63f6fb5eb1d9e2136e0a4497fa7"
+          }
+        },
+        {
+          "client_id": "224340447474-38akhjillsu2c8rgdiq5njmbg83dfhqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr10pqIwVQSpXrZWZ7krC_u4zmBns8lxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224340447474-38akhjillsu2c8rgdiq5njmbg83dfhqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

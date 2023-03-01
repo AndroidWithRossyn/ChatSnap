@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".user.ViewStoryActivity">
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="35dp"
+        android:theme="@style/progressColor"
+        android:layout_height="35dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/reverse" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/skip" />
+    </LinearLayout>
+
+<jp.shts.android.storiesprogressview.StoriesProgressView
+    android:layout_width="match_parent"
+    android:id="@+id/stories"
+    android:gravity="top"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="2dp"
+    android:layout_height="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/stories">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/pic"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:text="Username"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:id="@+id/username"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/r_seen"
+        android:padding="4dp"
+        android:layout_margin="10dp"
+        android:background="#27FFFFFF"
+  >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_eye"
+            app:tint="#fff"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:id="@+id/seen_number"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_trash"
+        android:background="#27FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:id="@+id/story_delete"
+        app:tint="#fff"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:id="@+id/message"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/stories_chat"
+            android:id="@+id/sendMessage"
+            android:fontFamily="@font/med"
+            android:hint="Send a message"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            tools:ignore="Autofill,HardcodedText,TextFields"
+            android:textColorHint="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="45dp"
+            android:padding="10dp"
+            android:rotation="50"
+            android:src="@drawable/ic_sending"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

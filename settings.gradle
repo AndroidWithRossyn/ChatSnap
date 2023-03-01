@@ -1,0 +1,4 @@
+include ':nativetemplates'
+include ':deepar'
+include ':app'
+rootProject.name = "ChatSnap"

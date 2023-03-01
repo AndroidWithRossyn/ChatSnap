@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <FrameLayout
+            android:id="@+id/localPreview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <FrameLayout
+            android:id="@+id/remote_video_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0"/>
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/everthing"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageButton
+                android:id="@+id/previousMask"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@null"
+                android:contentDescription="TODO"
+                android:tint="#000"
+                android:src="@drawable/ic_arrow_left"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+
+            <ImageButton
+                android:id="@+id/nextMask"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:tint="#000"
+                android:background="@null"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_arrow_right"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/masks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:buttonTint="@android:color/black"
+                        android:checked="true"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/textMasks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/masks"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Masks"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/effects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:buttonTint="@android:color/black"
+                        android:checked="false"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/textEffects"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/effects"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Effects"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/filters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:buttonTint="@android:color/black"
+                        android:checked="false"
+                        tools:targetApi="lollipop" />
+
+                    <TextView
+                        android:id="@+id/textFilters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/filters"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Filters"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginBottom="55dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/flip"
+                android:layout_width="70dp"
+                android:backgroundTint="#0000"
+                android:padding="20dp"
+                android:layout_marginRight="20sp"
+                android:src="@drawable/ic_mic"
+                android:background="@drawable/small_circle"
+                android:layout_height="70dp"
+                />
+
+            <ImageView
+                android:id="@+id/startCall"
+                android:layout_width="70dp"
+                android:backgroundTint="#DD3A2E"
+                android:padding="20dp"
+                android:src="@drawable/ic_phone_off"
+                android:background="@drawable/small_circle"
+                android:layout_height="70dp"
+               />
+
+            <ImageView
+                android:id="@+id/mute"
+                android:layout_marginLeft="20sp"
+                android:layout_width="70dp"
+                android:backgroundTint="#0000"
+                android:padding="20dp"
+                android:src="@drawable/ic_swap"
+                android:background="@drawable/small_circle"
+                android:layout_height="70dp"
+              />
+
+            <ImageView
+                android:id="@+id/face"
+                android:layout_marginLeft="20sp"
+                android:layout_width="70dp"
+                android:backgroundTint="#0000"
+                android:padding="20dp"
+                android:src="@drawable/ic_smile"
+                android:background="@drawable/small_circle"
+                android:layout_height="70dp"
+                app:tint="#fff" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    tools:context=".user.StoryViewerActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@+id/back"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:src="@drawable/ic_cancel"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:tint="#313131"
+          android:contentDescription="TODO"
+          tools:ignore="ContentDescription,HardcodedText" />
+
+      <ImageView
+          android:id="@+id/settings"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:contentDescription="TODO"
+          tools:ignore="ContentDescription,HardcodedText" />
+
+      <TextView
+          android:id="@+id/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:fontFamily="@font/bold"
+          android:text="Viewed by"
+          android:textColor="#313131"
+          android:textSize="22dp"
+          app:layout_constraintEnd_toStartOf="@+id/settings"
+          app:layout_constraintStart_toEndOf="@+id/back"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="HardcodedText,SpUsage" />
+
+
+      <RelativeLayout
+          android:id="@+id/mfriends"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="24dp"
+          android:background="@drawable/button_white"
+          android:layout_marginEnd="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/friendslist"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content" />
+      </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </LinearLayout>
+
+</ScrollView>

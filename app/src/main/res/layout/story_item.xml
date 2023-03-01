@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:orientation="vertical"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content">
+
+    <com.comix.rounded.RoundedCornerImageView
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="6dp"
+        android:background="#00000000"
+        app:cornerColor="#fff"
+        android:src="@drawable/avatar"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/story_photo" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/avatar"
+        android:visibility="gone"
+        android:layout_marginBottom="2dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/story_photo_seen"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/story_username"
+        android:maxLines="1"
+        android:textSize="15dp"
+        android:textColor="#313131"
+        android:fontFamily="@font/bold"
+        android:text="Username"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,SpUsage" />
+
+</LinearLayout>

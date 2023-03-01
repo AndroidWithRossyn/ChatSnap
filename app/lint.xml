@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="GifUsage">
+        <ignore path="src/main/res/drawable/typing.gif" />
+    </issue>
+    <issue id="IconDuplicates">
+        <ignore path="src/main/res/drawable/fantasma.png" />
+        <ignore path="src/main/res/drawable/logo.png" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/aa.png" />
+        <ignore path="src/main/res/drawable/avatar.png" />
+        <ignore path="src/main/res/drawable/bb.png" />
+        <ignore path="src/main/res/drawable/bb.png" />
+        <ignore path="src/main/res/drawable/bb.png" />
+        <ignore path="src/main/res/drawable/chatsnap.png" />
+        <ignore path="src/main/res/drawable/end.png" />
+        <ignore path="src/main/res/drawable/fantasma.png" />
+        <ignore path="src/main/res/drawable/girl.jpg" />
+        <ignore path="src/main/res/drawable/got.jpg" />
+        <ignore path="src/main/res/drawable/got_s.jpg" />
+        <ignore path="src/main/res/drawable/group.jpg" />
+        <ignore path="src/main/res/drawable/logo.png" />
+        <ignore path="src/main/res/drawable/original.jpg" />
+        <ignore path="src/main/res/drawable/pick.png" />
+        <ignore path="src/main/res/drawable/send.png" />
+        <ignore path="src/main/res/drawable/typing.gif" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/drawable/end.png" />
+        <ignore path="src/main/res/raw/calling.mp3" />
+    </issue>
+</lint>

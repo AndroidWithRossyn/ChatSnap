@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: rebus:bottom-dialog:0.0.5@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/315c4667c3bb28031b317d03a4753ba2/jetified-bottom-dialog-0.0.5/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/315c4667c3bb28031b317d03a4753ba2/jetified-bottom-dialog-0.0.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/315c4667c3bb28031b317d03a4753ba2/jetified-bottom-dialog-0.0.5/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/rebus/bottom-dialog/0.0.5/9524770cc18b9560c77b90b962b49f7a29c94a80/bottom-dialog-0.0.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/rebus/bottom-dialog/0.0.5/e8401ed98d55054f890cf1fe9a2a88a26b50957d/bottom-dialog-0.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
